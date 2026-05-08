@@ -1,6 +1,7 @@
 def caching_fibonacci():
-    cache = {}
+    cache = {} #оголошуємо порожній словник
     def fibonacci(n):
+        #перевірки відємних, 0 та 1
         if n <= 0:
             return 0
         if n == 1:
@@ -12,7 +13,9 @@ def caching_fibonacci():
         return cache[n]
     return fibonacci
 
+# Отримуємо функцію fibonacci
 fib = caching_fibonacci()
 
+# Використовуємо функцію fibonacci для обчислення чисел Фібоначчі   
 print(fib(10))  # Виведе 55
 print(fib(15))  # Виведе 610
